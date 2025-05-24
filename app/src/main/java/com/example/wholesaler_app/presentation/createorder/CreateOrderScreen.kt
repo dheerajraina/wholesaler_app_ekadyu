@@ -88,7 +88,7 @@ fun CreateOrderScreen(navController: NavController,screenWidth:Dp,screenHeight:D
                },
                 navigationIcon = {
                     Icon(
-                        imageVector = Icons.Default.ArrowBackIosNew, // Use a "Back" icon here
+                        imageVector = Icons.Default.ArrowBackIosNew,
                         contentDescription = "Back",
                         modifier = Modifier
                             .padding(horizontal = 12.dp)
@@ -126,7 +126,6 @@ fun CreateOrderScreen(navController: NavController,screenWidth:Dp,screenHeight:D
                 Spacer(
                     modifier = Modifier.size(20.dp)
                 )
-                // Create Order button at the bottom
                 CreateOrderButton({},)
             }
         }
@@ -138,7 +137,6 @@ fun CreateOrderScreen(navController: NavController,screenWidth:Dp,screenHeight:D
 
 @Composable
 fun CreateOrderForm() {
-    // Long card containing sub-cards
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -346,7 +344,7 @@ fun DatePickerModal(
                 return utcTimeMillis >= today
             }
 
-//
+
         }
     )
 
@@ -405,7 +403,7 @@ fun CreateOrderButton(onClick:()->Unit,){
         modifier = Modifier
                     .fillMaxWidth()
 //            .padding(vertical = screenHeight * 0.05f, horizontal = screenWidth * 0.3f)
-            .size(width = 150.dp, height = 70.dp) // Smaller and more square-like
+            .size(width = 150.dp, height = 70.dp)
 
     ) {
         Row {

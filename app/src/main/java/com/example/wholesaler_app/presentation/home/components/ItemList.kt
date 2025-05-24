@@ -40,7 +40,6 @@ fun CardListWithShowMore(
             CardOne(item)
         }
 
-        // Button as the last item in the list
         item {
             ButtonOne(onClick = {itemCount += 5 },screenHeight,screenWidth)
         }

@@ -179,7 +179,7 @@ fun PastOrdersScreen(navController: NavController, screenWidth:Dp, screenHeight:
 
         else {
             LazyVerticalGrid(
-                columns = GridCells.Fixed(2), // Columns to be adjusted according to passed screen width
+                columns = GridCells.Fixed(2),
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(horizontal = 12.dp)

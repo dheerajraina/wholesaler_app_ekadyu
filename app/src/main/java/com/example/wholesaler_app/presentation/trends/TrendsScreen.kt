@@ -71,7 +71,7 @@ fun TrendsScreen(navController: NavController, screenWidth: Dp, screenHeight: Dp
                 },
                 navigationIcon = {
                     Icon(
-                        imageVector = Icons.Default.ArrowBackIosNew, // Use a "Back" icon here
+                        imageVector = Icons.Default.ArrowBackIosNew,
                         contentDescription = "Back",
                         modifier = Modifier
                             .padding(horizontal = 12.dp)

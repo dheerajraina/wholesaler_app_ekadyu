@@ -279,7 +279,7 @@ fun MonthlySalesTrendsCard(context: Context = LocalContext.current) {
                                     it.saveToGallery(
                                         filename,
                                         100
-                                    ) // Quality = 100
+                                    )
                                     Toast.makeText(context, "Saved PNG to gallery", Toast.LENGTH_SHORT).show()
                                 }
                             }
@@ -437,7 +437,7 @@ fun TopProductsChartCard(context: Context = LocalContext.current) {
     val months = listOf("Jan", "Feb", "Mar", "Apr", "May", "Jun")
     val volumeData = listOf(1.25f, 2.0f, 0.75f, 3.5f, 2.8f, 4.1f)
 
-    // Find max Y value from data
+
     val maxVolume = (volumeData.maxOrNull() ?: 0f) + 1f
 
     Card(

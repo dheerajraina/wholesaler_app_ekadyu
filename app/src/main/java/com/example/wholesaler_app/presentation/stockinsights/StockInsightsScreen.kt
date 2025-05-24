@@ -118,7 +118,6 @@ fun StockInsightsScreen(navController: NavController, screenWidth: Dp, screenHei
             .fillMaxSize()
             .padding(innerPadding)) {
 
-            // Fixed Tab Bar
             val tabs = listOf("Stock Levels", "Low Stocks", "Slow Moving")
             var selectedTabIndex by remember { mutableStateOf(0) }
 
@@ -137,7 +136,6 @@ fun StockInsightsScreen(navController: NavController, screenWidth: Dp, screenHei
                 }
             }
 
-            // Scrollable content area
             Box(modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
@@ -337,7 +335,7 @@ fun WarehouseDropdownMenu(
                     onClick = {
                         selectedOption = selectionOption
                         expanded = false
-                        onPeriodSelected(selectionOption) // trigger your callback
+                        onPeriodSelected(selectionOption)
                     }
                 )
             }
@@ -524,7 +522,6 @@ fun LowStockCard(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Mandi Rows
             mandiData.forEach { (mandiName, quantity) ->
                 Row(
                     modifier = Modifier

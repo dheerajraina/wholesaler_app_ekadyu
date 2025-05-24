@@ -86,7 +86,7 @@ fun DemandTrendsScreen(navController: NavController, screenWidth: Dp, screenHeig
                 },
                 navigationIcon = {
                     Icon(
-                        imageVector = Icons.Default.ArrowBackIosNew, // Use a "Back" icon here
+                        imageVector = Icons.Default.ArrowBackIosNew,
                         contentDescription = "Back",
                         modifier = Modifier
                             .padding(horizontal = 12.dp)
@@ -199,7 +199,6 @@ fun MultiSelectDropdownCard() {
         Column(modifier = Modifier.padding(16.dp)) {
             Text("Select Products", style = MaterialTheme.typography.titleMedium)
 
-            // Selected items shown here
             if (selectedItems.isNotEmpty()) {
                 FlowRow(
                     modifier = Modifier.padding(top = 8.dp),
@@ -221,7 +220,6 @@ fun MultiSelectDropdownCard() {
                 )
             }
 
-            // Dropdown trigger
             Spacer(modifier = Modifier.height(8.dp))
             Button(
                 colors = ButtonDefaults.buttonColors(
@@ -232,7 +230,6 @@ fun MultiSelectDropdownCard() {
                 Text(if (expanded) "Hide Options" else "Select Products")
             }
 
-            // Dropdown options
             DropdownMenu(
                 expanded = expanded,
                 onDismissRequest = { expanded = false }
@@ -262,7 +259,6 @@ fun SeasonalDemandTrendsCard() {
     val months = listOf("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug")
     val selectedProducts = listOf("Product1", "Product2", "Product3")
 
-    // Dummy quantity data per product (each product has values for 8 months)
     val productData: Map<String, List<Float>> = mapOf(
         "Product1" to listOf(50000f, 80000f, 65000f, 70000f, 90000f, 110000f, 100000f, 95000f),
         "Product2" to listOf(30000f, 40000f, 50000f, 60000f, 75000f, 85000f, 95000f, 120000f),
@@ -312,7 +308,6 @@ fun SeasonalDemandTrendsCard() {
                     val data = LineData(lineDataSets)
                     this.data = data
 
-                    // Customize axes
                     xAxis.valueFormatter = IndexAxisValueFormatter(months)
                     xAxis.position = XAxis.XAxisPosition.BOTTOM
                     xAxis.setDrawGridLines(false)

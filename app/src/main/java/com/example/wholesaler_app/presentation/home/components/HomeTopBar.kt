@@ -43,12 +43,12 @@ fun HomeTopBar(navController:NavController,unreadNotifications:Int, unreadMessag
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(appBarHeight) // Standard height for top app bar
-                .padding(horizontal = 8.dp) // Horizontal padding for icons
-                .windowInsetsPadding(WindowInsets.statusBars), // Add status bar padding
+                .height(appBarHeight)
+                .padding(horizontal = 8.dp)
+                .windowInsetsPadding(WindowInsets.statusBars),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // 🔹 Left-side icons (navigation area)
+
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -59,7 +59,7 @@ fun HomeTopBar(navController:NavController,unreadNotifications:Int, unreadMessag
 
                 Box(
                     modifier = Modifier
-                        .padding(end = 8.dp) // Space between icons
+                        .padding(end = 8.dp)
                 ){
                     IconButton(onClick = { /* Handle favorite action */ }) {
                         Icon(Icons.Default.Notifications, contentDescription = "Notifications")
@@ -70,7 +70,7 @@ fun HomeTopBar(navController:NavController,unreadNotifications:Int, unreadMessag
                         Badge(
                             containerColor = Color(130, 241, 18),
                             modifier = Modifier
-                                .align(Alignment.TopEnd) // Position the badge in the top-right corner of the icon
+                                .align(Alignment.TopEnd)
                                 .size(20.dp),
                             content = {
                                 Text(
@@ -87,27 +87,27 @@ fun HomeTopBar(navController:NavController,unreadNotifications:Int, unreadMessag
 
             }
 
-            // 🔸 Centered title (takes up remaining space)
+
             Text(
                 text = "Go4U",
                 modifier = Modifier
-                    .weight(2f) // Ensures the title is centered
+                    .weight(2f)
                     .padding(horizontal = (density * 28).dp),
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.onPrimary,
                 fontWeight = FontWeight.W900
             )
 
-            // 🔹 Right-side icons (actions)
+
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Box(
 
                     modifier = Modifier
-                        .padding(end = 8.dp) // Space between icons
+                        .padding(end = 8.dp)
                 ){
-                    IconButton(onClick = { /* Handle search action */ }) {
+                    IconButton(onClick = { }) {
                         Icon(Icons.Filled.ChatBubble, contentDescription = "Messages")
                     }
 
@@ -116,7 +116,7 @@ fun HomeTopBar(navController:NavController,unreadNotifications:Int, unreadMessag
                         Badge(
                             containerColor = Color(130, 241, 18),
                             modifier = Modifier
-                                .align(Alignment.TopEnd) // Position the badge in the top-right corner of the icon
+                                .align(Alignment.TopEnd)
                                 .size(20.dp),
                             content = {
                                 Text(
@@ -131,7 +131,7 @@ fun HomeTopBar(navController:NavController,unreadNotifications:Int, unreadMessag
 
                 }
 
-                IconButton(onClick = { /* Handle more options */ }) {
+                IconButton(onClick = {  }) {
                     Icon(Icons.Filled.AccountCircle, contentDescription = "Account")
                 }
 
