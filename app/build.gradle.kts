@@ -59,8 +59,10 @@ dependencies {
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.navigation.compose)
 
-//    implementation (libs.accompanist.flowlayout)
-//    implementation(libs.charty)
     implementation (libs.mpandroidchart)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.gson)
+
 
 }
