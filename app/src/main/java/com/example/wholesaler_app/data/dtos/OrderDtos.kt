@@ -1,4 +1,4 @@
-package com.example.wholesaler_app.data.models
+package com.example.wholesaler_app.data.dtos
 
 import com.google.gson.annotations.SerializedName
 
