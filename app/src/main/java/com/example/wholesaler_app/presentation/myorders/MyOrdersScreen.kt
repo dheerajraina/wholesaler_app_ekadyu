@@ -19,12 +19,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
+import com.example.wholesaler_app.domain.repository.OrderRepositoryImpl
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyOrdersScreen(navController: NavController, screenWidth: Dp, screenHeight: Dp) {
-    val tabTitles = listOf("All", "Bulk", "Others", "Desc/Asc","Option 5","Option 6")
+    val tabTitles = listOf("All Orders", "Price ↑", "Price ↓", "Bulk Orders","By Product")
     var selectedTabIndex by remember { mutableStateOf(0) }
+
+    val viewModel = remember { MyOrdersViewModel(OrderRepositoryImpl()) }
+    val orders by viewModel.orders.collectAsState()
 
 
     val dummyItems = listOf(
@@ -86,11 +90,12 @@ fun MyOrdersScreen(navController: NavController, screenWidth: Dp, screenHeight: 
             }
 
             LazyColumn {
-                items(5) { index ->
+                items(orders.size) { index ->
+                    val order = orders[index]
                     OrderCard(
-                        orderTitle = "Order #${index + 1}",
-                        items = dummyItems,
-                        totalAmount = "Rs 400"
+                        orderTitle = "Order #${order.id}",
+                        items = order.items,
+                        totalAmount = "${order.total}"
 
                     ) {
 //                        TODO: navigation on view details click
